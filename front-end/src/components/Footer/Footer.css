@@ -1,0 +1,22 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    height: 10vh;
+    width: 50%;
+    left: 25%;
+}
+
+.rrss{
+    height: 50%;
+    margin-right: 5%;
+    border-radius: 3%;
+}
+
+.copyright{
+    position: relative;
+    width: 50%;
+    top: 20px;
+    left: 20%;
+}

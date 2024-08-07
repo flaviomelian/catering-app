@@ -1,0 +1,21 @@
+.mine{
+    position: relative;
+    width: 60%;
+}
+
+.my-link{
+    position: relative;
+    left: 15%;
+    margin-right: 20%;
+    transition: transform 0.2s ease-in;
+}
+
+.my-nav{
+    width: 100%;
+    font-size: 1.25em;
+    font-weight: 500;
+}
+
+.my-link:hover{
+    transform: scale(1.3);
+}
