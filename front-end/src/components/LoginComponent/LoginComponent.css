@@ -55,7 +55,7 @@ h2{
     bottom: 1vh;
 }
 
-.button{
+.button-login{
     position: relative;
     display: flex;
     justify-content: center;
@@ -65,7 +65,7 @@ h2{
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3); 
 }
 
-.button:hover {
+.button-login:hover {
     text-shadow: 0 0 10px rgba(255, 255, 255, 10); /* Efecto de brillo */
 }
 

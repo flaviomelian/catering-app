@@ -22,6 +22,9 @@ const worker = connection.define(
     enterprise: {
       type: DataTypes.INTEGER,
     },
+    password: {
+      type: DataTypes.STRING,
+    },
   },
   {
     // Configuración adicional para el modelo

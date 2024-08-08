@@ -52,7 +52,7 @@ const LoginComponent = () => {
         </div>
       </div>
       <p className='to-sign-up'>¿No tienes cuenta? <Link className='ankle-to-sign-up' to="/signup">Regístrate</Link></p>
-      <button type="button" class="btn btn-primary button" onClick={(e) => {
+      <button type="button" className="btn btn-primary button-login" onClick={(e) => {
               e.preventDefault()
               handleLogin()
             }}>LOGIN</button>
