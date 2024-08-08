@@ -4,6 +4,7 @@ const { DataTypes } = require("sequelize");
 // Importamos el objeto connection desde una ruta relativa, que maneja la conexión con nuestra base de datos
 const { connection } = require("../../database/index");
 const { group } = require("console");
+const enterprise = require("./enterprise_model");
 
 // Definimos un modelo 'worker' usando el objeto connection que se refiere a la tabla 'workers' en la base de datos
 const worker = connection.define(
@@ -15,20 +16,11 @@ const worker = connection.define(
     surnames_worker: {
         type: DataTypes.STRING,
     },
-    age_worker: {
+    DNI_worker: {
         type: DataTypes.INTEGER,
     },
-    parent_worker: {
-        type: DataTypes.INTEGER,
-    },
-    school: {
-      type: DataTypes.DOUBLE,
-    },
-    group: {
-      type: DataTypes.BLOB,
-    },
-    observations: {
-      type: DataTypes.STRING,
+    enterprise: {
+      type: DataTypes.INTEGER,
     },
   },
   {

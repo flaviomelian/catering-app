@@ -27,7 +27,7 @@ const LoginComponent = () => {
 
   return (
     <div id="login-component">
-      <h1> INICIAR SESIÓN </h1>
+      <h1 className='header-login'> INICIAR SESIÓN </h1>
       <div className='fields'>
         <h2>Usuario</h2>
         <div className='img-input'>

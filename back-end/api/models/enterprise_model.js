@@ -19,7 +19,11 @@ const enterprise = connection.define(
 
     password_enterprise:{
       type: DataTypes.STRING,
-    }
+    },
+
+    admin_enterprise:{
+      type: DataTypes.INTEGER,
+    },
   },
   {
     // Configuración adicional para el modelo
