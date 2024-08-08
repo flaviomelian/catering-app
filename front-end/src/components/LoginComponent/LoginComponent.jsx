@@ -51,9 +51,7 @@ const LoginComponent = () => {
               placeholder="Introduzca su contraseña"/> 
         </div>
       </div>
-      <p className='to-sign-up'>¿No tienes cuenta? <Link className='ankle-to-sign-up' onClick={
-        navigate("/signup")
-      }>Regístrate</Link></p>
+      <p className='to-sign-up'>¿No tienes cuenta? <Link className='ankle-to-sign-up' to="/signup">Regístrate</Link></p>
       <button type="button" class="btn btn-primary button" onClick={(e) => {
               e.preventDefault()
               handleLogin()
