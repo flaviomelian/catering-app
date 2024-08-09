@@ -5,6 +5,7 @@ import Login from '../pages/Login/Login'
 import SignUp from '../pages/SignUp/SignUp'
 import AboutUs from '../pages/AboutUs/AboutUs'
 import Suggestions from '../pages/Suggestions/Suggestions'
+import SignUpOk from '../pages/SignUpOK/SignUpOk'
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: '/suggestions',
         element: <Suggestions />,
+      },
+      {
+        path: '/signup-ok',
+        element: <SignUpOk />,
       },
       ],
     },

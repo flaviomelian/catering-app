@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 import './FormWorker.css';
 
 const FormWorker = () => {
   const [formData, setFormData] = useState({
     dni: '',
-    name: '',
+    name_worker: '',
     surnames: '',
     enterprise: '',
     password: '',
@@ -12,6 +13,7 @@ const FormWorker = () => {
   });
 
   const [error, setError] = useState('');
+  const navigate = useNavigate()
 
   const dniRegex = /^[0-9]{8}[A-Z]$/;
 
@@ -29,6 +31,23 @@ const FormWorker = () => {
       setError('DNI no válido. Debe tener 8 números seguidos de una letra.');
     }
   };
+
+  const handleSignup = async () =>{
+    try {
+      const data = {
+        dni: formData.dni,
+        name_worker: formData.name_worker,
+        surnames: formData.surnames,
+        enterprise: formData.enterprise,
+        password: formData.password
+      }
+      const result = await signUp(data)
+      localStorage.setItem('token', result.token)
+      navigate('/SignUpOK', { state: { registered: true } }) //Con esta linea redirecciono a RegisterOK y mando el valor TRUE en una variable registered que podre usar en el RegisterOK
+    } catch (error) {
+      toast.error('Rellene todos los campos adecuadamente, por favor')
+    }
+  }
 
   return (
     <div>
@@ -110,7 +129,7 @@ const FormWorker = () => {
           className="btn btn-primary button-form-worker"
           onClick={(e) => {
             e.preventDefault();
-            handleLogin();
+            handleSignup();
           }}
         >
           REGISTRARSE
