@@ -1,3 +1,11 @@
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+    background-color: #fff; /* Especifica un color de fondo para evitar que sea transparente */
+}
+
 .mine{
     position: relative;
     width: 60%;

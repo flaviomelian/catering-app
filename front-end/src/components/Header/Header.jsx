@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <div>
-      <header>
+      <header className='header'>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid mine">
             <div className="navbar-nav my-nav">

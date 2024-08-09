@@ -3,20 +3,23 @@
     flex-direction: row;
     position: fixed;
     bottom: 0;
-    height: 10vh;
-    width: 50%;
-    left: 25%;
+    height: 12vh;
+    width: 100%;
+    background-image: linear-gradient(to top, white 90%, transparent);
 }
 
 .rrss{
+    position: relative;;
     height: 50%;
     margin-right: 5%;
-    border-radius: 3%;
+    border-radius: 20%;
+    left: 10%;
+    top: 3vh;
 }
 
 .copyright{
     position: relative;
     width: 50%;
-    top: 20px;
-    left: 20%;
+    top: 50px;
+    left: 40%;
 }
