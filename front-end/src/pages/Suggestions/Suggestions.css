@@ -1,0 +1,14 @@
+.suggestions-header{
+    position: relative;
+    top: 10vh;
+    margin-bottom: 7%;
+    left: 40%;
+}
+
+.paragraph-suggestions{
+    position: relative;
+    left: 25%;
+    width: 42%;
+    font-size: 20px;
+    text-align: justify;
+}
