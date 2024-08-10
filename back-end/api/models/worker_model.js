@@ -19,7 +19,7 @@ const worker = connection.define(
     DNI_worker: {
         type: DataTypes.INTEGER,
     },
-    enterprise: {
+    enterprise_id: {
       type: DataTypes.INTEGER,
     },
     password: {
