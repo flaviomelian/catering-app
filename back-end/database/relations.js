@@ -17,7 +17,7 @@ const initializeRelations = () => {
       through: 'AdminEnterprise-Enterprises', // Nombre de la tabla intermedia
       foreignKey: 'adminDNI',                // Nombre de la clave foránea en la tabla intermedia para adminEnterprise
       otherKey: 'enterpriseId',              // Nombre de la clave foránea en la tabla intermedia para enterprise
-      sourceKey: 'DNI',                      // Campo en adminEnterprise que será la clave principal (DNI)
+      sourceKey: 'DNI_AdminEnterprise',                      // Campo en adminEnterprise que será la clave principal (DNI)
       targetKey: 'id'                        // Campo en enterprise que será la clave principal (id)
     });
     

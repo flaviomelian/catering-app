@@ -15,11 +15,9 @@ const AdminEnterprise = connection.define(
     surnames_AdminEnterprise: {
         type: DataTypes.STRING,
     },
-    address_AdminEnterprise: {
-        type: DataTypes.INTEGER,
-    },
     DNI_AdminEnterprise: {
-      type: DataTypes.DOUBLE,
+      type: DataTypes.STRING,
+      unique: true,
     },
   },
   {

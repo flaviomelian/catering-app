@@ -1,4 +1,4 @@
-const AdminEnterprise = require("../models/AdminEnterprise_model.js");
+const AdminEnterprise = require("../models/adminenterprise_model.js");
 
 const getAllAdminEnterprises = async (request, response) => {
   try {

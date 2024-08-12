@@ -9,9 +9,11 @@ const bcrypt = require("bcrypt");
 // Definimos la función signUp, que será una función asincrónica para manejar la creación de usuarios
 const signUp = async (req, res) => {
   try {
+    console.log("Signup-auth.controller", req.body);
+    
     const existingUser = await User.findOne({
       where: {
-        DNI_adminenterprise: req.body.DNI_adminenterprise,
+        DNI_AdminEnterprise: req.body.DNI_AdminEnterprise,
       },
     });
 
@@ -25,10 +27,9 @@ const signUp = async (req, res) => {
 
     // Creamos un nuevo usuario con los datos proporcionados en la solicitud
     const user = await User.create({
-      name_adminenterprise: req.body.name_adminenterprise,
-      surnames_adminenterprise: req.body.surnames_adminenterprise,
-      DNI: req.body.DNI,
-      address_adminenterprise: req.body.address_adminenterprise,
+      name_AdminEnterprise: req.body.name_AdminEnterprise,
+      surnames_AdminEnterprise: req.body.surnames_AdminEnterprise,
+      DNI_AdminEnterprise: req.body.DNI_AdminEnterprise,
     });
 
     // Creamos el payload del token, incluyendo el DNI del usuario
@@ -40,7 +41,7 @@ const signUp = async (req, res) => {
     return res.status(200).json({ token }); // === { token: token }
   } catch (error) {
     // Si hay un error, lo registramos y devolvemos un error 500 (Error interno del servidor)
-    console.log("Error signing up user");
+    console.log("Error signing up user", error);
     return res.status(500).json(error);
   }
 };

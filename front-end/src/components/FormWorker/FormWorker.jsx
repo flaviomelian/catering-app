@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
+import { signUp } from '../../services/auth';
 import './FormWorker.css';
 
 const FormWorker = () => {
@@ -34,6 +35,8 @@ const FormWorker = () => {
 
   const handleSignup = async () =>{
     try {
+      console.log("form data: ", formData);
+      
       const data = {
         dni: formData.dni,
         name_worker: formData.name_worker,
@@ -43,9 +46,9 @@ const FormWorker = () => {
       }
       const result = await signUp(data)
       localStorage.setItem('token', result.token)
-      navigate('/SignUpOK', { state: { registered: true } }) //Con esta linea redirecciono a RegisterOK y mando el valor TRUE en una variable registered que podre usar en el RegisterOK
+      navigate('/signup-ok', { state: { registered: true } }) //Con esta linea redirecciono a RegisterOK y mando el valor TRUE en una variable registered que podre usar en el RegisterOK
     } catch (error) {
-      toast.error('Rellene todos los campos adecuadamente, por favor')
+      console.error('Rellene todos los campos adecuadamente, por favor')
     }
   }
 
@@ -71,7 +74,7 @@ const FormWorker = () => {
           <h3 className="header-input-worker">Introduzca su Nombre:</h3>
           <input
             className="input-worker"
-            name="name"
+            name="name_worker"
             value={formData.name}
             onChange={handleInputChange}
             placeholder="Nombre"
